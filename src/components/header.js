@@ -8,15 +8,15 @@ export default function Header() {
     <div className='header'>
         <div className='container-icons'>
             <button className='window-icons left'>
-                <RemoveIcon className='icon'/>
+                <RemoveIcon className='icon' style={{fontSize: 20}}/>
             </button>
 
             <button className='window-icons'>
-                <CropIcon className='icon'/>
+                <CropIcon className='icon' style={{fontSize: 20}}/>
             </button>
         
             <button className='window-icons rigth'>
-                <CloseIcon className='icon'/>
+                <CloseIcon className='icon' style={{fontSize: 20}}/>
             </button>
         </div>
     </div>
