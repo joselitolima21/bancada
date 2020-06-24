@@ -14,7 +14,7 @@
     "directories": {
       "buildResources": "public"
     },
-    "productName": "Bancada"
+    "productName": "Bancada de Desempenho"
   },
   "homepage": "./",
   "dependencies": {
@@ -23,12 +23,17 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "chart.js": "^2.9.3",
     "cross-env": "^7.0.0",
     "electron-is-dev": "^1.1.0",
     "react": "^16.12.0",
+    "react-chartjs-2": "^2.9.0",
     "react-dom": "^16.12.0",
+    "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.0",
+    "react-scripts": "3.4.1",
+    "redux": "^4.0.5",
+    "serialport": "^8.0.7",
     "typeface-roboto": "^0.0.75"
   },
   "scripts": {
@@ -58,6 +63,7 @@
   "devDependencies": {
     "concurrently": "^5.1.0",
     "electron": "^7.1.11",
-    "electron-builder": "^22.3.2"
+    "electron-builder": "^22.3.2",
+    "electron-rebuild": "^1.10.1"
   }
 }

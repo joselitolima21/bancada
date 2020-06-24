@@ -20,7 +20,7 @@ function createWindow () {
     },
     frame: false,
     show: false,
-    title: 'Bancada',
+    title: 'Bancada de Desempenho',
   })
 
   // and load the index.html of the app.

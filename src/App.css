@@ -92,7 +92,15 @@ html,body {
     outline: none;
 }
 
+.window-icons:hover {
+    background-color: #D4D4D4;
+    background-image: none;
+    outline: none;
+}
+
 .window-icons:focus {
+    background-color: #D4D4D4;
+    background-image: none;
     outline: none;
     box-shadow: none;
 }
@@ -215,7 +223,15 @@ input[type='radio']:checked:after {
     background-image: -webkit-linear-gradient(top, #908FE3 0%, #6045E2 100%);
     background-image: linear-gradient(to bottom, #908FE3 0%, #6045E2 100%);
   }
+
 .blue:active {
+    background-color: rgb(95, 94, 168);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(110, 108, 190)), color-stop(100%, rgb(71, 50, 175)));
+    background-image: -webkit-linear-gradient(top, rgb(110, 108, 190) 0%, rgb(71, 50, 175) 100%);
+    background-image: linear-gradient(to bottom, rgb(110, 108, 190) 0%, rgb(71, 50, 175) 100%);
+}
+
+.blue:focus {
     background-color: rgb(95, 94, 168);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(110, 108, 190)), color-stop(100%, rgb(71, 50, 175)));
     background-image: -webkit-linear-gradient(top, rgb(110, 108, 190) 0%, rgb(71, 50, 175) 100%);
@@ -233,7 +249,67 @@ input[type='radio']:checked:after {
     background-image: -webkit-linear-gradient(top, #fcfcfc 0%, #f1f1f1 100%);
     background-image: linear-gradient(to bottom, #fcfcfc 0%, #f1f1f1 100%);
   }
+
 .white:active {
     background-color: #ddd;
     background-image: none;
+}
+
+.white:focus {
+    background-color: #ddd;
+    background-image: none;
+}
+
+/* Botoes em linha */
+
+.buttonsInline {
+    display: flex;
+    padding: 0 30px;
+    margin-top: 20px;
+}
+
+.buttonsInline button {
+    margin: 0px 5px;
+}
+
+/* Inputs */
+.inputBox {
+    border: rgb(182, 181, 181) solid 2px;
+    border-radius: 6px;
+    padding-left: 10px;   
+    height: 40px;
+}
+
+.homeMenu .inputBox {
+    margin: 20px  35px 0px 35px;
+    height: 40px;
+}
+
+.inputBox:focus {
+    outline: none;
+    background-color: rgba(182, 181, 181,0.2);
+}
+
+/* Select Box */
+
+.selectBox {
+    border: rgb(182, 181, 181) solid 2px;
+    border-radius: 6px;
+    padding-left: 10px;   
+    height: 40px;
+}
+
+.homeMenu .selectBox {
+    margin: 20px  35px 0px 35px;
+    height: 40px;
+}
+
+.selectBox:focus {
+    outline: none;
+}
+
+/* Gráfico de testes */
+
+.graph{
+    display: flex;
 }
