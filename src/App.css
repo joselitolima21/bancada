@@ -308,6 +308,254 @@ input[type='radio']:checked:after {
     outline: none;
 }
 
+/* Configuração da grid */
+
+.workGrid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 15% 20% auto;
+    grid-template-areas: 'infoBar resultsBar graphArea';
+}
+
+.graphArea {
+    grid-area: 'graphArea';
+}
+
+/* Estilização da area de info */
+
+.infoBar {
+    display: flex;
+    flex-direction: column;
+    grid-area: 'infoBar';
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.primeiraDiv {
+    padding-top: 80px;
+    background-color: #6045E2;
+    border-bottom-right-radius: 20px;
+}
+
+.segundaDiv {
+    background-color: #6045E2;
+}
+
+.terceiraDiv {
+    flex-grow: 1;
+    background-color: #6045E2;
+    border-top-right-radius: 20px;
+
+}
+
+.iconInfoBar {
+    color: #FFFFFF;
+    margin-right: 10px;
+}
+
+@media(max-width: 1300px) {
+.infoBar h1 {
+    font-size: 17px;
+    color: #FFFFFF;
+    display: inline;
+}
+
+.telainicalName, .resultsName {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.infoBar h2 {
+    font-size: 17px;
+    color: #FFFFFF;
+}
+
+.ensaioInfos { 
+    margin-left: 20px;
+}
+
+}
+
+@media(min-width: 1300px) {
+    .infoBar h1 {
+        font-size: 20px;
+        color: #FFFFFF;
+        display: inline;
+    }
+    
+    .telainicalName, .resultsName {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 20px;
+        padding-left: 14px;
+    }
+
+    .infoBar h2 {
+        font-size: 20px;
+        color: #FFFFFF;
+    }
+
+    .ensaioInfos { 
+        margin-left: 34px;
+    }
+}
+
+.resultsName {
+    background-color: #FFFFFF;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.resultsName h1, .resultsName .iconInfoBar {
+    color: #6045E2;
+}
+    
+
+.telainicalName {
+    background-color: #6045E2;
+    border-bottom-right-radius: 20px;
+}
+
+.ensaioInfos { 
+    position: absolute;
+    bottom: 40px;
+}
+
+/* Informacoes dos resultados */
+
+.resultsBar {
+    grid-area: 'resultsBar';
+}
+
+.timerDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.alarmIcon {
+    margin-right: 6px;
+}
+
+.timeSet h2 {
+    font-size: 45px;
+    display: inline;
+    margin: 0;
+    font-weight: 400;
+}
+
+.initButton {
+    width: 150px;
+    margin-top: 10px;
+}
+
+.resultsShowDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.valoresMedios h2 {
+    font-size: 20px;
+    display: inline;
+}
+
+.questionIcon {
+    margin-left: 10px;
+    color: rgb(140, 140, 140);
+}
+
+.exportDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.export h2 {
+    font-size: 20px;
+    display: inline;
+}
+
+.export {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cardResults {
+    display: flex;
+    width: 80%;
+    background: rgb(135,120,204);
+    background: linear-gradient(90deg, rgba(135,120,204,1) 0%, rgba(96,69,226,1) 100%);
+    border-radius: 8px;
+}
+
+.graphIcon {
+    color: #FFFFFF;
+}
+
+.graphNames h1 {
+    font-size:18px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 7px;
+    color: #FFFFFF;
+}
+.graphNames h2 {
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    margin-top: 4px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+@media screen and (max-height: 630px) {
+    .cardResults {
+       margin-top: 10px;
+    }
+}
+
+@media screen and (max-height: 660px) and (min-height: 631px) {
+    .cardResults {
+       margin-top: 12px;
+    }
+}
+
+@media screen and (max-height: 680px) and (min-height: 661px) {
+    .cardResults {
+       margin-top: 16px;
+    }
+}
+
+@media screen and (max-height: 720px) and (min-height: 681px) {
+    .cardResults {
+       margin-top: 18px;
+    }
+    .timerDiv {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-height: 721px) {
+    .cardResults {
+       margin-top: 18px;
+    }
+    .resultsBar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
 /* Gráfico de testes */
 
 .graph{
