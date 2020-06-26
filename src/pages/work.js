@@ -1,13 +1,107 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import HouseIcon from '@material-ui/icons/HouseOutlined'
 import ChartIcon from '@material-ui/icons/ShowChart'
 import Alarm from '@material-ui/icons/Alarm'
 import Info from '@material-ui/icons/HelpOutline'
 import Graph from '@material-ui/icons/BarChart'
+import { Chart } from 'chart.js'
+
 
 export default function Work({ history }) {
+    const dataSet = {
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        datasets: [
+            {
+                label: 'Distância em (cm)',
+                fill: true,
+                lineTension: 0.1,
+                backgroundColor: 'rgba(75,192,192,0.4)',
+                borderColor: 'rgba(75,192,192,1)',
+                borderCapStyle: 'butt',
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: 'miter',
+                pointBorderColor: 'rgba(75,192,192,1)',
+                pointBackgroundColor: '#fff',
+                pointBorderWidth: 1,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+                pointHoverBorderColor: 'rgba(220,220,220,1)',
+                pointHoverBorderWidth: 2,
+                pointRadius: 1,
+                pointHitRadius: 10,
+                data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            }
+        ]
+    };
 
-    const [file,setFile] = useState('valor1')
+    useEffect(() => {
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [1,2,3,4,5],
+                datasets: [{
+                    label: 'Tração',
+                    data: [5,4, 2, 3, 1],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                    ],
+                    borderWidth: 1,
+                    fill: false
+                },
+            {
+                label: 'Torque',
+                    data: [4,3, 1, 4, 5],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                    ],
+                    borderWidth: 1,
+                    fill: false
+            },
+            {
+                label: 'Rotação',
+                    data: [2,3, 4, 1, 1],
+                    backgroundColor: [
+                        'rgba(255, 206, 86, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 206, 86, 1)',
+                    ],
+                    borderWidth: 1,
+                    fill: false
+            },{
+                label: 'Potência',
+                    data: [3,3, 2, 3, 1],
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                    ],
+                    borderWidth: 1,
+                    fill: false
+            }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    }, [])
+
+    const [file, setFile] = useState('valor1')
 
     return (
         <div className='content'>
@@ -52,7 +146,7 @@ export default function Work({ history }) {
                         </div>
 
                         <div className="cardResults">
-                            <Graph className='graphIcon' style={{ fontSize: 74}} />
+                            <Graph className='graphIcon' style={{ fontSize: 74 }} />
                             <div className="graphNames">
                                 <h1>Tração</h1>
                                 <h2>400 N</h2>
@@ -60,7 +154,7 @@ export default function Work({ history }) {
                         </div>
 
                         <div className="cardResults">
-                            <Graph className='graphIcon' style={{ fontSize: 74}} />
+                            <Graph className='graphIcon' style={{ fontSize: 74 }} />
                             <div className="graphNames">
                                 <h1>Torque</h1>
                                 <h2>30 N.m</h2>
@@ -68,7 +162,7 @@ export default function Work({ history }) {
                         </div>
 
                         <div className="cardResults">
-                            <Graph className='graphIcon' style={{ fontSize: 74}} />
+                            <Graph className='graphIcon' style={{ fontSize: 74 }} />
                             <div className="graphNames">
                                 <h1>Rotação</h1>
                                 <h2>100 RPM</h2>
@@ -76,7 +170,7 @@ export default function Work({ history }) {
                         </div>
 
                         <div className="cardResults">
-                            <Graph className='graphIcon' style={{ fontSize: 74}} />
+                            <Graph className='graphIcon' style={{ fontSize: 74 }} />
                             <div className="graphNames">
                                 <h1>Potência</h1>
                                 <h2>45 HP</h2>
@@ -84,7 +178,7 @@ export default function Work({ history }) {
                         </div>
 
 
-                    
+
                     </div>
 
                     <div className="exportDiv">
@@ -101,9 +195,14 @@ export default function Work({ history }) {
                     </div>
 
                 </div>
-
                 <div className='graphArea'>
-
+                    <div className='name-graph' >
+                        <h2>Gráfico</h2>
+                        <Info className='questionIcon' style={{ fontSize: 26 }} />
+                    </div>
+                    <div className="graphRegion">
+                        <canvas id="myChart" className='myChart'></canvas>
+                    </div>
                 </div>
             </div>
         </div >
