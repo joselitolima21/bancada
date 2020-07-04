@@ -1,4 +1,8 @@
-# Programa de Sensoriamento da Bancada de Desempenho
+# Programa de Sensoriamento de uma Bancada de Desempenho
+
+## Screenshots
+![](/src/assets/tela2.png)
+
 ## Gráficos
 - [ ] Tração estática/Empuxo em função do tempo de ensaio
 - [ ] Torque em função do tempo de ensaio
@@ -18,4 +22,36 @@
 ## Dúvidas
 - [ ] Executar o ensaio e gerar o gráfico em tempo real, ou gerar o gráfico após execução
 # Erros para corrigir
-- [ ] Mudar o icone de minimizar quando está maximizado
+- [ ] Mudar o icone de minimizar quando está maximizado    
+
+# Estrutura de funcionamento do programa
+1. Salvamento de dados
+- [ ] Criar meu tipo de arquivo, na tela da primeira opção devo adicionar para escolher onde salvar
+na tela dos gráficos adicionar opção de salvar.
+- [ ] Salvar apenas em json e fazer o mesmo do feito acima
+2. Estrutura do recebimento de dados dos sensores
+- [ ] Verificar as portas que possa está
+``` js
+
+/* Realizando a conexão */
+function connect() {
+    /*  
+    Verifica as portas
+    Se conectar prossegue
+    E retorna a port e parser
+
+    Assim que começar a conectar muda um estado para conectando
+    Mostrando na tela e sem iniciar a contagem
+    */
+    return { port, parser }
+}
+
+const { port, parser } = connect()
+
+port.on('open', () => (/* Muda o estado para conexão iniciada, inicia o cronometro, e seta o timeout*/))
+
+parser.on('data', (line) => {
+    /* Atualizar o valor do data com o line */
+})
+
+```
