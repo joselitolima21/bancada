@@ -8,36 +8,10 @@ import { Chart } from 'chart.js'
 
 
 export default function Work({ history }) {
-    const dataSet = {
-        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-        datasets: [
-            {
-                label: 'Distância em (cm)',
-                fill: true,
-                lineTension: 0.1,
-                backgroundColor: 'rgba(75,192,192,0.4)',
-                borderColor: 'rgba(75,192,192,1)',
-                borderCapStyle: 'butt',
-                borderDash: [],
-                borderDashOffset: 0.0,
-                borderJoinStyle: 'miter',
-                pointBorderColor: 'rgba(75,192,192,1)',
-                pointBackgroundColor: '#fff',
-                pointBorderWidth: 1,
-                pointHoverRadius: 5,
-                pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-                pointHoverBorderColor: 'rgba(220,220,220,1)',
-                pointHoverBorderWidth: 2,
-                pointRadius: 1,
-                pointHitRadius: 10,
-                data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-            }
-        ]
-    };
 
     useEffect(() => {
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myChart = new Chart(ctx, {
+        var ctx = document.getElementById('myChart').getContext('2d'); // eslint-disable-next-line
+        var myChart = new Chart(ctx, { 
             type: 'line',
             data: {
                 labels: [1,2,3,4,5],
@@ -110,13 +84,17 @@ export default function Work({ history }) {
                     <div className='primeiraDiv'>
                         <div className='telainicalName' >
                             <HouseIcon className='iconInfoBar' style={{ fontSize: 20 }} />
-                            <h1>TELA INICIAL</h1>
+                            <button className='routeButtons' onClick={()=>{history.push('/')}}>
+                                <h1>TELA INICIAL</h1>
+                            </button>
                         </div>
                     </div>
                     <div className='segundaDiv'>
                         <div className='resultsName'>
                             <ChartIcon className='iconInfoBar' style={{ fontSize: 20 }} />
-                            <h1>RESULTADOS</h1>
+                            <button className='routeButtons'>
+                                <h1>RESULTADOS</h1>
+                            </button>
                         </div>
                     </div>
                     <div className='terceiraDiv'>

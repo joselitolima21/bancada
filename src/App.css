@@ -1,9 +1,9 @@
 /* Configurações geraris */
 
-html,body {
+html, body {
     margin: 0;
     width: 100%;
-    height:100%;
+    height: 100%;
     font-family: 'roboto';
 }
 
@@ -13,15 +13,16 @@ html,body {
     box-sizing: border-box;
 }
 
-#root  {
+#root {
     margin: 0;
     width: 100%;
-    height:100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
 
 /* Header e Footer*/
+
 .header, .footer {
     display: flex;
     box-shadow: inset 0 1px 0 #f5f4f5;
@@ -106,7 +107,7 @@ html,body {
 }
 
 .icon {
-    color: #6E6E6E; 
+    color: #6E6E6E;
 }
 
 .rigth {
@@ -140,7 +141,7 @@ html,body {
 
 /* Radio buttons*/
 
-.radio{
+.radio {
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -178,7 +179,7 @@ input[type='radio']:checked:after {
     left: -1px;
     position: relative;
     background-color: #6045E2;
-    background-image: radial-gradient(#fff,#fff 28%,transparent 32%);
+    background-image: radial-gradient(#fff, #fff 28%, transparent 32%);
     content: '';
     display: inline-block;
     visibility: visible;
@@ -186,9 +187,10 @@ input[type='radio']:checked:after {
 }
 
 /* Botoes gerais*/
+
 .divButton {
     text-align: center;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 .btn {
@@ -222,7 +224,7 @@ input[type='radio']:checked:after {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #908FE3), color-stop(100%, #6045E2));
     background-image: -webkit-linear-gradient(top, #908FE3 0%, #6045E2 100%);
     background-image: linear-gradient(to bottom, #908FE3 0%, #6045E2 100%);
-  }
+}
 
 .blue:active {
     background-color: rgb(95, 94, 168);
@@ -248,7 +250,7 @@ input[type='radio']:checked:after {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, #f1f1f1));
     background-image: -webkit-linear-gradient(top, #fcfcfc 0%, #f1f1f1 100%);
     background-image: linear-gradient(to bottom, #fcfcfc 0%, #f1f1f1 100%);
-  }
+}
 
 .white:active {
     background-color: #ddd;
@@ -273,21 +275,22 @@ input[type='radio']:checked:after {
 }
 
 /* Inputs */
+
 .inputBox {
     border: rgb(182, 181, 181) solid 2px;
     border-radius: 6px;
-    padding-left: 10px;   
+    padding-left: 10px;
     height: 40px;
 }
 
 .homeMenu .inputBox {
-    margin: 20px  35px 0px 35px;
+    margin: 20px 35px 0px 35px;
     height: 40px;
 }
 
 .inputBox:focus {
     outline: none;
-    background-color: rgba(182, 181, 181,0.2);
+    background-color: rgba(182, 181, 181, 0.2);
 }
 
 /* Select Box */
@@ -295,12 +298,12 @@ input[type='radio']:checked:after {
 .selectBox {
     border: rgb(182, 181, 181) solid 2px;
     border-radius: 6px;
-    padding-left: 10px;   
+    padding-left: 10px;
     height: 40px;
 }
 
 .homeMenu .selectBox {
-    margin: 20px  35px 0px 35px;
+    margin: 20px 35px 0px 35px;
     height: 40px;
 }
 
@@ -346,7 +349,6 @@ input[type='radio']:checked:after {
     flex-grow: 1;
     background-color: #6045E2;
     border-top-right-radius: 20px;
-
 }
 
 .iconInfoBar {
@@ -355,29 +357,25 @@ input[type='radio']:checked:after {
 }
 
 @media(max-width: 1300px) {
-.infoBar h1 {
-    font-size: 17px;
-    color: #FFFFFF;
-    display: inline;
-}
-
-.telainicalName, .resultsName {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 10px;
-    padding-left: 10px;
-}
-
-.infoBar h2 {
-    font-size: 17px;
-    color: #FFFFFF;
-}
-
-.ensaioInfos { 
-    margin-left: 20px;
-}
-
+    .infoBar h1 {
+        font-size: 17px;
+        color: #FFFFFF;
+        display: inline;
+    }
+    .telainicalName, .resultsName {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 10px;
+        padding-left: 10px;
+    }
+    .infoBar h2 {
+        font-size: 17px;
+        color: #FFFFFF;
+    }
+    .ensaioInfos {
+        margin-left: 20px;
+    }
 }
 
 @media(min-width: 1300px) {
@@ -386,7 +384,6 @@ input[type='radio']:checked:after {
         color: #FFFFFF;
         display: inline;
     }
-    
     .telainicalName, .resultsName {
         display: flex;
         flex-direction: row;
@@ -394,16 +391,40 @@ input[type='radio']:checked:after {
         margin-left: 20px;
         padding-left: 14px;
     }
-
     .infoBar h2 {
         font-size: 20px;
         color: #FFFFFF;
     }
-
-    .ensaioInfos { 
+    .ensaioInfos {
         margin-left: 34px;
     }
 }
+.routeButtons {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+    outline: inherit;
+    margin: 10px 0;
+}
+
+.routeButtons:hover {
+    outline: none;
+    transform: translate(2px,1px);
+    transition: 0.2s;
+    opacity: 80%
+} 
+
+.routeButtons:focus {
+    outline: none;
+}
+
+.routeButtons:active {
+    outline:none;
+    opacity: 80%
+} 
 
 .resultsName {
     background-color: #FFFFFF;
@@ -414,14 +435,13 @@ input[type='radio']:checked:after {
 .resultsName h1, .resultsName .iconInfoBar {
     color: #6045E2;
 }
-    
 
 .telainicalName {
     background-color: #6045E2;
     border-bottom-right-radius: 20px;
 }
 
-.ensaioInfos { 
+.ensaioInfos {
     position: absolute;
     bottom: 40px;
 }
@@ -491,11 +511,12 @@ input[type='radio']:checked:after {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 .cardResults {
     display: flex;
     width: 80%;
-    background: rgb(135,120,204);
-    background: linear-gradient(90deg, rgba(135,120,204,1) 0%, rgba(96,69,226,1) 100%);
+    background: rgb(135, 120, 204);
+    background: linear-gradient(90deg, rgba(135, 120, 204, 1) 0%, rgba(96, 69, 226, 1) 100%);
     border-radius: 8px;
 }
 
@@ -504,13 +525,14 @@ input[type='radio']:checked:after {
 }
 
 .graphNames h1 {
-    font-size:18px;
+    font-size: 18px;
     margin: 0;
     padding: 0;
     text-align: left;
     margin-top: 7px;
     color: #FFFFFF;
 }
+
 .graphNames h2 {
     font-size: 25px;
     margin: 0;
@@ -522,25 +544,25 @@ input[type='radio']:checked:after {
 
 @media screen and (max-height: 630px) {
     .cardResults {
-       margin-top: 10px;
+        margin-top: 10px;
     }
 }
 
 @media screen and (max-height: 660px) and (min-height: 631px) {
     .cardResults {
-       margin-top: 12px;
+        margin-top: 12px;
     }
 }
 
 @media screen and (max-height: 680px) and (min-height: 661px) {
     .cardResults {
-       margin-top: 16px;
+        margin-top: 16px;
     }
 }
 
 @media screen and (max-height: 720px) and (min-height: 681px) {
     .cardResults {
-       margin-top: 18px;
+        margin-top: 18px;
     }
     .timerDiv {
         margin-top: 20px;
@@ -549,7 +571,7 @@ input[type='radio']:checked:after {
 
 @media screen and (min-height: 721px) {
     .cardResults {
-       margin-top: 18px;
+        margin-top: 18px;
     }
     .resultsBar {
         display: flex;
@@ -560,7 +582,7 @@ input[type='radio']:checked:after {
 
 /* Gráfico de testes */
 
-.graph{
+.graph {
     display: flex;
 }
 
@@ -577,7 +599,7 @@ input[type='radio']:checked:after {
     align-items: flex-end;
 }
 
-.myChart{
+.myChart {
     height: 100% !important;
     width: 100% !important;
 }
@@ -589,10 +611,8 @@ input[type='radio']:checked:after {
     padding-bottom: 20px;
 }
 
-
 .graphArea {
     display: flex;
     flex-direction: column;
     padding-right: 20px;
-    
 }

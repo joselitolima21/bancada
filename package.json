@@ -33,7 +33,6 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
-    "serialport": "^8.0.7",
     "typeface-roboto": "^0.0.75"
   },
   "scripts": {
@@ -64,6 +63,7 @@
     "concurrently": "^5.1.0",
     "electron": "^7.1.11",
     "electron-builder": "^22.3.2",
-    "electron-rebuild": "^1.10.1"
+    "electron-rebuild": "^1.10.1",
+    "wait-on": "^5.2.0"
   }
 }

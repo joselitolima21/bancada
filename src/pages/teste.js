@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { actions } from '../store/reducers/testeReducer'
 import portFunction from '../functions/funcTeste'
@@ -103,4 +103,4 @@ export default function Teste({ history }) {
         </div>
     )
 
-}
+}*/

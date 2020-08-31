@@ -1,4 +1,4 @@
-const SerialPort = window.require('serialport');
+/*const SerialPort = window.require('serialport');
 //Requerindo o parser - interpreta o hexadecimal
 const Readline = window.require('@serialport/parser-readline');
 
@@ -16,4 +16,4 @@ export default () => {
     const parser = new Readline()
     port.pipe(parser)
     return {port,parser}
-}
+}*/

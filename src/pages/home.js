@@ -17,7 +17,7 @@ export default function Home({history}) {
                     </label>
                     <label>
                         <input type="radio" name="radios" className='radio-input' checked={checked === 'option2' ? true : false} onChange={()=>setChecked('option2')}/>
-                        <span className='radio-text' > Carregar ensaio salvo </span>
+                        <span className='radio-text' > Carregar arquivo de ensaio </span>
                     </label>
                 </div>
                 
