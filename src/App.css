@@ -186,11 +186,20 @@ input[type='radio']:checked:after {
     border: 2px solid white;
 }
 
+/* Alert texts */
+
+h2.alert-text {
+    color: red;
+    font-size: 13px;
+    margin-left: 35px;
+    margin-bottom: -7px;
+}
+
 /* Botoes gerais*/
 
 .divButton {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
 .btn {

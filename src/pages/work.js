@@ -5,9 +5,13 @@ import Alarm from '@material-ui/icons/Alarm'
 import Info from '@material-ui/icons/HelpOutline'
 import Graph from '@material-ui/icons/BarChart'
 import { Chart } from 'chart.js'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { actions } from '../store/reducers/infoFileReducer'
 
 export default function Work({ history }) {
+    
+    const dispatch = useDispatch()
+    const state = useSelector(state => state.infoFileReducer)
 
     useEffect(() => {
         var ctx = document.getElementById('myChart').getContext('2d'); // eslint-disable-next-line
@@ -84,7 +88,10 @@ export default function Work({ history }) {
                     <div className='primeiraDiv'>
                         <div className='telainicalName' >
                             <HouseIcon className='iconInfoBar' style={{ fontSize: 20 }} />
-                            <button className='routeButtons' onClick={()=>{history.push('/')}}>
+                            <button className='routeButtons' onClick={()=>{
+                                        history.push('/')
+                                        dispatch(actions.clearState())
+                                        }}>
                                 <h1>TELA INICIAL</h1>
                             </button>
                         </div>
@@ -99,8 +106,8 @@ export default function Work({ history }) {
                     </div>
                     <div className='terceiraDiv'>
                         <div className="ensaioInfos">
-                            <h2>Ensaio: Teste 1</h2>
-                            <h2>Hélice: 13x4</h2>
+                            <h2>Ensaio: {state.name}</h2>
+                            <h2>Hélice: {state.heliceType}</h2>
                         </div>
                     </div>
                 </div>

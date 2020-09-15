@@ -22,7 +22,7 @@
 ## Dúvidas
 - [ ] Executar o ensaio e gerar o gráfico em tempo real, ou gerar o gráfico após execução
 # Erros para corrigir
-- [ ] Mudar o icone de minimizar quando está maximizado    
+- [ ] Mudar o icone de minimizar quando está maximizado
 
 # Estrutura de funcionamento do programa
 1. Salvamento de dados
