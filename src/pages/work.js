@@ -7,6 +7,7 @@ import Graph from '@material-ui/icons/BarChart'
 import { Chart } from 'chart.js'
 import { useDispatch, useSelector } from 'react-redux'
 import { actions } from '../store/reducers/infoFileReducer'
+import files from '../functions/manageFile'
 
 export default function Work({ history }) {
     
@@ -86,6 +87,23 @@ export default function Work({ history }) {
             <div className='workGrid'>
                 <div className='infoBar'>
                     <div className='primeiraDiv'>
+
+                        <div className='telainicalName' >
+                            <button className='routeButtons' onClick={()=>{
+                                        files.save(`${state.name}.ban`,state)
+                                        }}>
+                                <h1>Salvar</h1>
+                            </button>
+                        </div>
+
+                        <div className='telainicalName' >
+                            <button className='routeButtons' onClick={()=>{
+                                        files.read(`${state.name}.ban`)
+                                        }}>
+                                <h1>Pegar</h1>
+                            </button>
+                        </div>
+
                         <div className='telainicalName' >
                             <HouseIcon className='iconInfoBar' style={{ fontSize: 20 }} />
                             <button className='routeButtons' onClick={()=>{

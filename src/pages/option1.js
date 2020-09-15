@@ -41,7 +41,7 @@ export default function Option1({ history }) {
                 <input
                     className="inputBox"
                     type="text"
-                    placeholder="Hélice acoplada"
+                    placeholder="Tipo de hélice acoplada"
                     onChange={(event)=>{setAlert(null);dispatch(actions.updateHelice(event.target.value))}}
                 />
                 {(alert==='helice' ||  alert==='ambos') && <h2 className='alert-text' >Especifique o tipo de hélice</h2>}
