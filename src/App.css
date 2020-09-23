@@ -309,6 +309,12 @@ h2.alert-text {
     border-radius: 6px;
     padding-left: 10px;
     height: 40px;
+    background: none;
+	color: inherit;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+    outline: inherit;
 }
 
 .homeMenu .selectBox {
@@ -317,6 +323,12 @@ h2.alert-text {
 }
 
 .selectBox:focus {
+    background-color: rgba(182, 181, 181, 0.2);
+    outline: none;
+}
+
+.selectBox:hover {
+    background-color: rgba(182, 181, 181, 0.2);
     outline: none;
 }
 
@@ -350,6 +362,12 @@ h2.alert-text {
     border-bottom-right-radius: 20px;
 }
 
+.extraDiv {
+    padding-top: 35px;
+    background-color: #6045E2;
+    border-top-right-radius: 20px;
+}
+
 .segundaDiv {
     background-color: #6045E2;
 }
@@ -357,7 +375,7 @@ h2.alert-text {
 .terceiraDiv {
     flex-grow: 1;
     background-color: #6045E2;
-    border-top-right-radius: 20px;
+    position: relative
 }
 
 .iconInfoBar {
@@ -383,7 +401,8 @@ h2.alert-text {
         color: #FFFFFF;
     }
     .ensaioInfos {
-        margin-left: 20px;
+        padding-left: 20px;
+        padding-right: 8px;
     }
 }
 
@@ -405,9 +424,11 @@ h2.alert-text {
         color: #FFFFFF;
     }
     .ensaioInfos {
-        margin-left: 34px;
+        padding-left: 34px;
+        padding-right: 12px;
     }
 }
+
 .routeButtons {
     background: none;
 	color: inherit;
@@ -417,6 +438,10 @@ h2.alert-text {
 	cursor: pointer;
     outline: inherit;
     margin: 10px 0;
+}
+
+.inputArquivos {
+    display: none
 }
 
 .routeButtons:hover {
@@ -452,7 +477,9 @@ h2.alert-text {
 
 .ensaioInfos {
     position: absolute;
-    bottom: 40px;
+    bottom: 20px;
+    width: 100%;
+    word-wrap: break-word;
 }
 
 /* Informacoes dos resultados */

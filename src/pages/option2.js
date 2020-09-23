@@ -1,20 +1,26 @@
 import React, { useState } from 'react'
 import homeImage from '../assets/homeImage.jpg'
+import files from '../functions/manageFile'
 
 export default function Option2({ history }) {
 
-    const [file,setFile] = useState('valor1')
+    const [file,setFile] = useState('Nenhum arquivo')
 
     return (
         <div className='content'>
 
             <div className='homeMenu'>
                 
-                <select className="selectBox" value={file} onChange={(event)=>setFile(event.target.value)}>
-                    <option className='options' value="valor1">Valor 1</option>
-                    <option className='options' value="valor2" >Valor 2</option>
-                    <option className='options' value="valor3">Valor 3</option>
-                </select>
+                <button className="selectBox" onClick={async (event)=>{
+                    const infoOfFile = files.read()
+                    if(infoOfFile.name) {
+                        setFile(infoOfFile.name)
+                    } else {
+                        setFile(infoOfFile)
+                    }
+                }}>
+                    {file}
+                </button>
                 
                 <div className="buttonsInline">
                     <button className='btn white' onClick={() => history.push('/')} >Mudar Escolha</button>
