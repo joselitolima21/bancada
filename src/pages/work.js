@@ -21,10 +21,61 @@ export default function Work({ history }) {
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: [1, 2, 3, 4, 5],
+                labels: [
+                    0.000,
+0.600,
+1.159,
+1.718,
+2.323,
+2.881,
+3.490,
+4.051,
+4.609,
+5.215,
+5.772,
+6.332,
+6.940,
+7.498,
+8.104,
+8.666,
+9.225,
+9.833,
+10.394,
+10.954,
+11.560,
+12.119,
+12.678,
+13.281,
+13.843,
+14.450,
+15.011,
+15.571,
+16.176,
+16.733,
+17.292,
+17.893,
+18.454,
+19.060,
+19.618,
+20.179,
+20.785,
+21.344,
+21.901,
+22.504,
+23.062,
+23.622,
+24.228,
+24.788,
+25.393,
+25.951,
+26.511,
+27.119,
+27.673,
+28.229
+                ],
                 datasets: [{
                     label: 'Tração',
-                    data: [5, 4, 2, 3, 1],
+                    data: [564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564,564],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                     ],
@@ -34,7 +85,7 @@ export default function Work({ history }) {
                     borderWidth: 1,
                     fill: false
                 },
-                {
+                /*{
                     label: 'Torque',
                     data: [4, 3, 1, 4, 5],
                     backgroundColor: [
@@ -68,7 +119,7 @@ export default function Work({ history }) {
                     ],
                     borderWidth: 1,
                     fill: false
-                }]
+                }*/]
             },
             options: {
                 scales: {
@@ -159,35 +210,9 @@ export default function Work({ history }) {
                         <Graph className='graphIcon' style={{ fontSize: 74 }} />
                         <div className="graphNames">
                             <h1>Tração</h1>
-                            <h2>400 N</h2>
+                            <h2>564 g</h2>
                         </div>
                     </div>
-
-                    <div className="cardResults">
-                        <Graph className='graphIcon' style={{ fontSize: 74 }} />
-                        <div className="graphNames">
-                            <h1>Torque</h1>
-                            <h2>30 N.m</h2>
-                        </div>
-                    </div>
-
-                    <div className="cardResults">
-                        <Graph className='graphIcon' style={{ fontSize: 74 }} />
-                        <div className="graphNames">
-                            <h1>Rotação</h1>
-                            <h2>100 RPM</h2>
-                        </div>
-                    </div>
-
-                    <div className="cardResults">
-                        <Graph className='graphIcon' style={{ fontSize: 74 }} />
-                        <div className="graphNames">
-                            <h1>Potência</h1>
-                            <h2>45 HP</h2>
-                        </div>
-                    </div>
-
-
 
                 </div>
 
@@ -198,8 +223,8 @@ export default function Work({ history }) {
                     </div>
 
                     <select className="selectBox" value={file} onChange={(event) => setFile(event.target.value)}>
-                        <option className='options' value="valor1">Valor 1</option>
-                        <option className='options' value="valor2" >Valor 2</option>
+                        <option className='options' value="valor1">Txt</option>
+                        <option className='options' value="valor2" >Csv</option>
                         <option className='options' value="valor3">Valor 3</option>
                     </select>
                 </div>
@@ -219,3 +244,27 @@ export default function Work({ history }) {
     )
 
 }
+
+/* <div className="cardResults">
+                        <Graph className='graphIcon' style={{ fontSize: 74 }} />
+                        <div className="graphNames">
+                            <h1>Torque</h1>
+                            <h2>0 N.m</h2>
+                        </div>
+                    </div>
+
+                    <div className="cardResults">
+                        <Graph className='graphIcon' style={{ fontSize: 74 }} />
+                        <div className="graphNames">
+                            <h1>Rotação</h1>
+                            <h2>0 RPM</h2>
+                        </div>
+                    </div>
+
+                    <div className="cardResults">
+                        <Graph className='graphIcon' style={{ fontSize: 74 }} />
+                        <div className="graphNames">
+                            <h1>Potência</h1>
+                            <h2>0 HP</h2>
+                        </div>
+                    </div> */

@@ -9,18 +9,13 @@
 - [ ] Rotação em função do tempo de ensaio
 - [ ] Potência em função do tempo de ensaio
 ## Valores
-- [ ] Tração média 
+- [ ] Tração média
 - [ ] Torque médio
 - [ ] Rotação média
 - [ ] Potência média
 ### Requisitos
 - [ ] Escolher Tempo do ensaio
-- [ ] Adicionar várias hélices
 - [ ] Exportar os valores obtidos em um arquivo com o nome do programa e hélice
-## Adicionais
-- [ ] Adicionar várias hélices no mesmo save
-## Dúvidas
-- [ ] Executar o ensaio e gerar o gráfico em tempo real, ou gerar o gráfico após execução
 # Erros para corrigir
 - [ ] Mudar o icone de minimizar quando está maximizado
 
@@ -30,7 +25,8 @@
 na tela dos gráficos adicionar opção de salvar.
 - [ ] Salvar apenas em json e fazer o mesmo do feito acima
 2. Estrutura do recebimento de dados dos sensores
-- [ ] Verificar as portas que possa está
+- [ ] Verificar as portas seriais conectadas
+
 ``` js
 
 /* Realizando a conexão */

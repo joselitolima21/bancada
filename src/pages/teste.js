@@ -1,4 +1,4 @@
-/*import React from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { actions } from '../store/reducers/testeReducer'
 import portFunction from '../functions/funcTeste'
@@ -9,11 +9,12 @@ export default function Teste({ history }) {
     const state = useSelector(state => state.testeReducer)
 
     function start(time) {
-        
         var startTime = Date.now()
-        const { port, parser } = portFunction()
-        //Funçoes que escutam eventos
         dispatch(actions.setTimeStart(startTime))
+    
+        const { port, parser } = portFunction()
+        
+        //Funçoes que escutam eventos
         port.on('open', () => (console.log("Conexão iniciada !!"))) // Realizar algo: enviar para o redux uma action
        
         
@@ -72,7 +73,7 @@ export default function Teste({ history }) {
     return (
         <div className='content'>
             <div>
-                <button className='btn blue' onClick={() => { start(5000) }}> Iniciar </button>
+                <button className='btn blue' onClick={() => { start(10000) }}> Iniciar </button>
                 <button className='btn white' onClick={() => {dispatch(actions.clearData())}}> Apagar </button>
                 <button className='btn white' onClick={() => history.push('/')}> Voltar </button>
 
@@ -103,4 +104,4 @@ export default function Teste({ history }) {
         </div>
     )
 
-}*/
+}
